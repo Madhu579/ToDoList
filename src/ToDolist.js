@@ -52,8 +52,8 @@ export const ToDolist = () => {
     }
 
   return (
-    <div className="container my-5">
-        <div className="mx-auto rounded border p-4 bg-secondary" style={{maxWidth:"600px"}}>
+    <div className="container my-3">
+        <div className="mx-auto rounded border p-4 " style={{backgroundColor:"#ba74e6",maxWidth:"600px"}}>
             <h1 className="text-white text-center mb-5 ">My ToDo List</h1>
             <form className="d-flex" onSubmit={handleSubmitTask}>
                 <input className="form-control me-2" placeholder="New Task" name="task"/>
@@ -64,14 +64,14 @@ export const ToDolist = () => {
                 todos.map((todo,index)=>{
                     return(
                         <div key={index} className="rounded mt-4 p-2 d-flex" 
-                            style={{ backgroundColor: todo.completed ? "greenyellow" : "lightgray"}}>
+                            style={{ backgroundColor: todo.completed ? "#82cfde" : "lightgray"}}>
+                           <i className={"me-2 "+(todo.completed?"bi bi-check-square text-success ":"bi bi-square text-black")}
+                             style={{cursor:"pointer"}} 
+                             onClick={()=>{changestatus(index)}}></i>
                            <div className="me-auto">
                             {todo.task}
                            </div>
                            <div >
-                            <i className={"me-2 "+(todo.completed?"bi bi-check-square":"bi bi-square")}
-                             style={{cursor:"pointer"}} 
-                             onClick={()=>{changestatus(index)}}></i>
                             <i className="me-2 text-primary-emphasis bi bi-pencil-square" style={{cursor:"pointer"}} onClick={()=>{updateTask(index)}}></i>
                             <i className="bi bi-trash text-danger" style={{cursor:"pointer"}} onClick={()=>{deleteTask(index)}}></i>
                            </div>
