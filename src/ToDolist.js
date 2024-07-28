@@ -52,7 +52,7 @@ export const ToDolist = () => {
     }
 
   return (
-    <div className="container-fluid pt-4 pb-4" style={{background: "linear-gradient(135deg, #6e8efb, #a777e3)"}}>
+    <div className="container-fluid pt-4 pb-4" style={{background: "linear-gradient(135deg, #6e8efb, #a777e3)",height:"100vh"}}>
         <div className="mx-auto rounded border p-4  bg-light" style={{maxWidth:"600px"}}>
             <h1 className="text-dark text-center" style={{ fontFamily: "'Caveat', cursive", fontSize: "3rem" }}>My ToDo List</h1>
             <form className="d-flex" onSubmit={handleSubmitTask}>
