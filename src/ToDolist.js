@@ -52,19 +52,19 @@ export const ToDolist = () => {
     }
 
   return (
-    <div className="container my-3">
-        <div className="mx-auto rounded border p-4 " style={{backgroundColor:"#ba74e6",maxWidth:"600px"}}>
-            <h1 className="text-white text-center mb-5 ">My ToDo List</h1>
+    <div className="container-fluid pt-4 pb-4" style={{background: "linear-gradient(135deg, #6e8efb, #a777e3)"}}>
+        <div className="mx-auto rounded border p-4  bg-light" style={{maxWidth:"600px"}}>
+            <h1 className="text-dark text-center" style={{ fontFamily: "'Caveat', cursive", fontSize: "3rem" }}>My ToDo List</h1>
             <form className="d-flex" onSubmit={handleSubmitTask}>
-                <input className="form-control me-2" placeholder="New Task" name="task"/>
-                <button className="btn btn-outline-light" typr="submit">Add</button>
+                <input className="form-control  me-2 mt-2" placeholder="New Task" name="task"/>
+                <button className="btn btn-outline-primary mt-2" type="submit">Add</button>
             </form>
-            <div className="overflow-scroll" style={{height:"400px",scrollbarWidth:"none"}}>
+            <div className="mt-2" style={{height:"400px",overflowX:"hidden",overflowY:"auto",scrollbarWidth:"thin"}}>
             {
                 todos.map((todo,index)=>{
                     return(
-                        <div key={index} className="rounded mt-4 p-2 d-flex" 
-                            style={{ backgroundColor: todo.completed ? "#82cfde" : "lightgray"}}>
+                        <div key={index} className="rounded mt-4 p-2 d-flex me-2" 
+                            style={{ backgroundColor: todo.completed ? "#1ae43f" : "lightgray"}}>
                            <i className={"me-2 "+(todo.completed?"bi bi-check-square text-success ":"bi bi-square text-black")}
                              style={{cursor:"pointer"}} 
                              onClick={()=>{changestatus(index)}}></i>
