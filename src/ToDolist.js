@@ -53,7 +53,7 @@ export const ToDolist = () => {
 
   return (
     <div className="container-fluid py-4 " style={{background: "linear-gradient(135deg, #6e8efb, #a777e3)",height:"100vh"}}>
-        <div className="mx-auto rounded border p-4 mt-2 bg-light" style={{maxWidth:"600px"}}>
+        <div className="mx-auto rounded border p-4 my-auto bg-light" style={{maxWidth:"600px"}}>
             <h1 className="text-dark text-center" style={{ fontFamily: "'Caveat', cursive", fontSize: "3rem" }}>My ToDo List</h1>
             <form className="d-flex" onSubmit={handleSubmitTask}>
                 <input className="form-control  me-2 mt-2" placeholder="New Task" name="task"/>
